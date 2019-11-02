@@ -1,3 +1,7 @@
+import { DormPage } from './../pages/dorm/dorm';
+import { TypedetailPage } from './../pages/apartment/typedetail';
+import { HttpClientModule } from '@angular/common/http';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -8,28 +12,35 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
 import { TypeRoomPage } from '../pages/type-room/type-room';
+import { LoaddataProvider } from '../providers/loaddata/loaddata';
+import { CondominiumPage } from '../pages/condominium/condominium';
+import { MansionPage } from '../pages/mansion/mansion';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RegisterPage,TypeRoomPage
+    RegisterPage,TypeRoomPage,TypedetailPage,
+    CondominiumPage,MansionPage,DormPage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    RegisterPage,TypeRoomPage
+    RegisterPage,TypeRoomPage,TypedetailPage,
+    CondominiumPage,MansionPage,DormPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LoaddataProvider
   ]
 })
 export class AppModule {}

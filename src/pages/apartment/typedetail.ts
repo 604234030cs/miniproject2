@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LoaddataProvider } from '../../providers/loaddata/loaddata';
 
 /**
  * Generated class for the TypedetailPage page.
@@ -15,11 +16,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TypedetailPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  rentedroom: any = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public apart:LoaddataProvider) {
+    this.loaddata();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TypedetailPage');
+  }
+  loaddata(){
+    this.apart.getapart().subscribe(rooms =>{
+      this.rentedroom=rooms;
+    });  
   }
 
 }
