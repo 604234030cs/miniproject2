@@ -1,6 +1,7 @@
 import { LoaddataProvider } from './../../providers/loaddata/loaddata';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RoomdetailPage } from '../roomdetail/roomdetail';
 
 /**
  * Generated class for the DormPage page.
@@ -29,6 +30,9 @@ export class DormPage {
     this.porm.getdorm().subscribe(porms=>{
       this.rentedroom=porms;
     });
+  }
+  getdetail(room){
+    this.navCtrl.push(RoomdetailPage,room);
   }
 
 }

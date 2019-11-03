@@ -1,0 +1,35 @@
+<!--
+  Generated template for the RoomdetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>{{roomdata.name_rentedroom}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+        <ion-thumbnail item-left>
+            <img src="assets/imgs/{{roomdata.id_picture}}.jpg">
+        </ion-thumbnail>
+    </ion-card-header>
+    <ion-card-content>
+      <p>ชื่อห้องพัก:{{roomdata.name_rentedroom}}</p>
+      <p>ที่อยู:{{roomdata.address_rentedroom}}</p>
+      <p>ราคา:{{roomdata.price}}</p>
+      <p>สิ่งอำนวยความสะดวก:{{roomdata.facilities}}</p>
+      <p>ประเภทห้องเช่า:{{roomdata.name_type}}</p>
+      <p>จำกัดเพศของผู้เช่า:{{roomdata.restrict_gender}}</p>
+      <p>เบอร์ติดต่อ:{{roomdata.phone_rentedroom}}</p>
+      
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

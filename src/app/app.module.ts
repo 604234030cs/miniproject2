@@ -15,6 +15,7 @@ import { TypeRoomPage } from '../pages/type-room/type-room';
 import { LoaddataProvider } from '../providers/loaddata/loaddata';
 import { CondominiumPage } from '../pages/condominium/condominium';
 import { MansionPage } from '../pages/mansion/mansion';
+import { RoomdetailPage } from '../pages/roomdetail/roomdetail';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { MansionPage } from '../pages/mansion/mansion';
     MyApp,
     HomePage,
     RegisterPage,TypeRoomPage,TypedetailPage,
-    CondominiumPage,MansionPage,DormPage
+    CondominiumPage,MansionPage,DormPage,RoomdetailPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,7 @@ import { MansionPage } from '../pages/mansion/mansion';
     MyApp,
     HomePage,
     RegisterPage,TypeRoomPage,TypedetailPage,
-    CondominiumPage,MansionPage,DormPage
+    CondominiumPage,MansionPage,DormPage,RoomdetailPage
   ],
   providers: [
     StatusBar,

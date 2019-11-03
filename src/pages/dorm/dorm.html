@@ -15,7 +15,7 @@
 
 <ion-content padding>
 
-    <ion-item *ngFor="let room of rentedroom">
+    <ion-item *ngFor="let room of rentedroom"(click)="getdetail(room)">
         <ion-thumbnail item-left>
             <img src="assets/imgs/{{room.id_picture}}.jpg">
         </ion-thumbnail>

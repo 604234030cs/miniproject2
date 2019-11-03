@@ -1,6 +1,7 @@
 import { LoaddataProvider } from './../../providers/loaddata/loaddata';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RoomdetailPage } from '../roomdetail/roomdetail';
 
 /**
  * Generated class for the MansionPage page.
@@ -44,6 +45,9 @@ export class MansionPage {
   // }
   onsearch(event){
      console.log(event.target.value);
+  }
+  getdetail(room){
+    this.navCtrl.push(RoomdetailPage,room);
   }
   
 }

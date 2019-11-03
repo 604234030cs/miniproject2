@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoaddataProvider } from '../../providers/loaddata/loaddata';
+import { RoomdetailPage } from '../roomdetail/roomdetail';
 
 /**
  * Generated class for the TypedetailPage page.
@@ -29,6 +30,9 @@ export class TypedetailPage {
     this.apart.getapart().subscribe(rooms =>{
       this.rentedroom=rooms;
     });  
+  }
+  getdetail(room){
+    this.navCtrl.push(RoomdetailPage,room);
   }
 
 }

@@ -7,20 +7,20 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title *ngIf="!isSearchbarOpened">mansion</ion-title>
-    <ion-searchbar *ngIf="!isSearchbarOpened"></ion-searchbar>
-    <ion-buttons end>
-      <button ion-button icon-only *ngIf="!isSearchbarOpened" (click)="!isSearchbarOpened=true" (search)="onsearch($event)"><ion-icon name="search"></ion-icon>
+    <!-- <ion-title *ngIf="!isSearchbarOpened">mansion</ion-title>
+    <ion-searchbar *ngIf="!isSearchbarOpened"></ion-searchbar> -->
+    <!-- <ion-buttons end> -->
+      <!-- <button ion-button icon-only *ngIf="!isSearchbarOpened" (click)="!isSearchbarOpened=true" (search)="onsearch($event)"><ion-icon name="search"></ion-icon>
       </button>
-    </ion-buttons>
-  </ion-navbar>
+    </ion-buttons> -->
+  </ion-navbar> 
 
 </ion-header>
 
 
 <ion-content padding>
   
-    <ion-item *ngFor="let room of rentedroom">
+    <ion-item *ngFor="let room of rentedroom" (click)="getdetail(room)">
         <ion-thumbnail item-left>
             <img src="assets/imgs/{{room.id_picture}}.jpg">
         </ion-thumbnail>
